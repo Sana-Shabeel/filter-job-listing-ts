@@ -1,3 +1,11 @@
+.App-header {
+  height: 156px;
+  background: url("./assets//bg-header-desktop.svg");
+  background-color: var(--dark-grayish-cyan);
+  background-size: cover;
+  background-position: center;
+}
+
 .flex {
   display: flex;
   justify-content: space-between;
