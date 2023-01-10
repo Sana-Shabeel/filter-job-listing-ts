@@ -1,7 +1,16 @@
+/*
+
+white = --desaturated-dark-cyan
+pinkish ? = --dark-grayish-cyan
+dark = --very-dark-grayish-cyan
+
+
+*/
+
 .App-header {
   height: 156px;
   background: url("./assets//bg-header-desktop.svg");
-  background-color: var(--dark-grayish-cyan);
+  background-color: #5ca5a5;
   background-size: cover;
   background-position: center;
 }
@@ -9,4 +18,20 @@
 .flex {
   display: flex;
   justify-content: space-between;
+}
+
+.new,
+.featured {
+  background: var(--dark-grayish-cyan);
+  width: 3.18rem;
+  padding: 0.2rem 0 0.1rem;
+  align-items: center;
+  border-radius: 10rem;
+  border: none;
+  font-weight: 700;
+  color: var(--desaturated-dark-cyan);
+}
+.featured {
+  width: 5.1rem;
+  background-color: var(--very-dark-grayish-cyan);
 }
