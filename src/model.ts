@@ -1,4 +1,4 @@
-export interface RootObject {
+export interface Role {
   id: number;
   company: string;
   logo: string;
@@ -11,5 +11,5 @@ export interface RootObject {
   contract: string;
   location: string;
   languages: string[];
-  tools: any[];
+  tools: string[];
 }
