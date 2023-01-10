@@ -1,16 +1,30 @@
 import React from "react";
+import { Role } from "../model";
 
-const JobList = () => {
+interface Props {
+  role: Role;
+}
+
+const JobList = ({ role }: Props) => {
   return (
     <div>
       <div className="company-logo">
-        <img src="" alt="company logo" />
+        <img src={role.logo} alt="company logo" />
       </div>
-      <div className="compay-role">
-        <div className="company-role-tile">
-          <p className="job-title">Photosnap</p>
+      <div className="job-description">
+        <div className="company-name">
+          <p className="company-name">Photosnap</p>
           <button className="new">NEW!</button>
           <button className="featured">FEATURED</button>
+        </div>
+
+        <div>Senior frontend developer</div>
+        <div className="job-type">
+          <span>1day</span>
+          <span className="dot"></span>
+          <span>1day</span>
+          <span className="dot"></span>
+          <span>1day</span>
         </div>
       </div>
     </div>
