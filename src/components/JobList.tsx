@@ -17,14 +17,14 @@ const JobList = ({ role }: Props) => {
           </div>
           <div className="role-description">
             <div className="company-description flex">
-              <p className="company-name">{role.company}</p>
-              <div className="job-status">
-                <button className="new">NEW!</button>
+              <h4 className="company-name">{role.company}</h4>
+              {role.new ? <button className="new">NEW!</button> : null}
+              {role.featured ? (
                 <button className="featured">FEATURED</button>
-              </div>
+              ) : null}
             </div>
             <div className="position">
-              <h4 className="position__name">{role.position}</h4>
+              <h3 className="position__name">{role.position}</h3>
             </div>
             <div className="job-type flex">
               <span>{role.postedAt}</span>
