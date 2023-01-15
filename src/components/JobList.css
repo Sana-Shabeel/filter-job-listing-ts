@@ -1,0 +1,32 @@
+.job-list {
+  margin: 10% 2rem;
+  border: 1px solid;
+}
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 3rem;
+}
+.role {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.languages {
+  width: 400px;
+  height: 32px;
+  background: #000;
+}
+
+.job-type {
+  display: flex;
+}
+.dot {
+  display: block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #000;
+  margin: 0 10px;
+}
