@@ -9,19 +9,17 @@ const JobList = ({ role }: Props) => {
   console.log(role.logo);
 
   return (
-    <section className="job-list">
+    <section className={`job-list ${role.featured ? "featured-job" : ""}`}>
       <div className="container">
         <div className="role">
           <div className="company-logo">
             <img src={role.logo} alt="company logo" />
           </div>
           <div className="role-description">
-            <div className="company-description flex">
+            <div className="company-description">
               <h4 className="company-name">{role.company}</h4>
-              {role.new ? <button className="new">NEW!</button> : null}
-              {role.featured ? (
-                <button className="featured">FEATURED</button>
-              ) : null}
+              {role.new ? <div className="new">NEW!</div> : null}
+              {role.featured ? <div className="featured">FEATURED</div> : null}
             </div>
             <div className="position">
               <h3 className="position__name">{role.position}</h3>
