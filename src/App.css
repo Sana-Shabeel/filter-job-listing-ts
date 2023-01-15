@@ -23,16 +23,19 @@ dark = --very-dark-grayish-cyan
 
 .new,
 .featured {
-  background: var(--dark-grayish-cyan);
-  width: 3.18rem;
-  padding: 0.2rem 0 0.1rem;
-  align-items: center;
-  border-radius: 10rem;
-  border: none;
+  display: grid;
+  place-items: center;
+  padding: 0.5em;
+  border-radius: 20%/50%;
   font-weight: 700;
+  font-size: 0.8rem;
   color: var(--desaturated-dark-cyan);
+  background: var(--dark-grayish-cyan);
 }
 .featured {
-  width: 5.1rem;
   background-color: var(--very-dark-grayish-cyan);
+}
+h3,
+h4 {
+  margin: 0;
 }
