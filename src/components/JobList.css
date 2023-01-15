@@ -1,16 +1,21 @@
 .job-list {
-  margin: 10% 2rem;
-  border: 1px solid;
+  width: min(100% - 2rem, 1110px);
+  margin: 1.5rem auto;
+  border-radius: 5px;
+  box-shadow: -1px 5px 5px 2px #d4dfdf;
+}
+.featured-job {
+  border-left: 5px solid var(--dark-grayish-cyan);
 }
 .container {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 3rem;
+  padding: 1.5rem 3rem;
 }
 .role {
   display: flex;
-  justify-content: space-between;
+  gap: 1.5rem;
   align-items: center;
 }
 .languages {
@@ -19,14 +24,28 @@
   background: #000;
 }
 
-.job-type {
-  display: flex;
+.job-type,
+.company-name {
+  font-size: 1rem;
+  color: var(--dark-grayish-cyan);
 }
 .dot {
   display: block;
-  width: 10px;
-  height: 10px;
+  width: 5px;
+  height: 5px;
   border-radius: 50%;
-  background: #000;
+  background: var(--dark-grayish-cyan);
   margin: 0 10px;
+}
+
+.role-description {
+  width: 16.37rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.company-description {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
 }
