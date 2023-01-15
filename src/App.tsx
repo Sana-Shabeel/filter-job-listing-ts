@@ -4,7 +4,7 @@ import "./App.css";
 import JobList from "./components/JobList";
 
 function App() {
-  console.log(data);
+  // console.log(data);
 
   return (
     <div className="App">
