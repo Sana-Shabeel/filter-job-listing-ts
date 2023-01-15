@@ -9,7 +9,7 @@ dark = --very-dark-grayish-cyan
 
 .App-header {
   height: 156px;
-  background: url("./assets//bg-header-desktop.svg");
+  background: url("../public/assets//bg-header-desktop.svg");
   background-color: #5ca5a5;
   background-size: cover;
   background-position: center;
