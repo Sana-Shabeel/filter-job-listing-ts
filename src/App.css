@@ -18,6 +18,7 @@ dark = --very-dark-grayish-cyan
 .flex {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 .new,
