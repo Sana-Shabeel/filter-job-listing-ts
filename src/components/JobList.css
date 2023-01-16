@@ -18,10 +18,26 @@
   gap: 1.5rem;
   align-items: center;
 }
-.languages {
+.tags {
   width: 400px;
   height: 32px;
-  background: #000;
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+}
+.tag {
+  padding: 8px 10px;
+  display: grid;
+  place-items: center;
+  background: var(--lgc-filter-tablet);
+  color: var(--dark-grayish-cyan);
+  font-weight: 700;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.tag:hover {
+  background: var(--dark-grayish-cyan);
+  color: var(--desaturated-dark-cyan);
 }
 
 .job-type,
@@ -48,4 +64,11 @@
   display: flex;
   align-items: center;
   gap: 0.9rem;
+}
+.position__name {
+  font-size: 1.3rem;
+}
+.position__name:hover {
+  cursor: pointer;
+  color: var(--dark-grayish-cyan);
 }
