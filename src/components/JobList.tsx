@@ -34,7 +34,13 @@ const JobList = ({ role }: Props) => {
           </div>
         </div>
 
-        <div className="languages"></div>
+        <div className="tags">
+          <div className="tag">{role.role}</div>
+          <div className="tag">{role.level}</div>
+          {role.languages.map((lang) => (
+            <div className="tag">{lang}</div>
+          ))}
+        </div>
       </div>
     </section>
   );
