@@ -1,5 +1,5 @@
 .job-list {
-  width: min(100% - 2rem, 1110px);
+  width: min(100% - 4rem, 1110px);
   margin: 1.5rem auto;
   border-radius: 5px;
   box-shadow: -1px 5px 5px 2px #d4dfdf;
@@ -11,6 +11,8 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
+  gap: 2rem;
   padding: 1.5rem 3rem;
 }
 .role {
@@ -71,8 +73,5 @@
   cursor: pointer;
   color: var(--dark-grayish-cyan);
 }
-@media only screen and (max-width: 950px) {
-  .position__name {
-    font-size: 1rem;
-  }
+@media only screen and (max-width: 770px) {
 }
