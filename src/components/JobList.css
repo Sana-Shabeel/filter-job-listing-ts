@@ -21,7 +21,6 @@
   align-items: center;
 }
 .tags {
-  height: 32px;
   display: flex;
   justify-content: flex-end;
   gap: 1rem;
@@ -73,5 +72,30 @@
   cursor: pointer;
   color: var(--dark-grayish-cyan);
 }
-@media only screen and (max-width: 770px) {
+@media only screen and (max-width: 550px) {
+  .job-list {
+    width: 90%;
+    margin: 3rem auto;
+  }
+  .container {
+    padding: 0.8rem;
+    position: relative;
+  }
+  .role {
+    flex-direction: column;
+    margin: 3rem 0 0;
+  }
+  .company-logo {
+    position: absolute;
+    top: -10%;
+    left: 5%;
+  }
+  .company-logo img {
+    width: 65px;
+    height: 65px;
+  }
+  .tags {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
 }
