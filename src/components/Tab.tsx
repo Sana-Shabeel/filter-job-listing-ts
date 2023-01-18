@@ -11,17 +11,30 @@ const Tab = ({ filter, setFilter }: Props) => {
     setFilter((prev) => prev.filter((_, i) => i !== idx));
   };
 
+  const handleRemoveAll = () => {
+    setFilter([]);
+  };
+
   return (
     <div className="tab">
-      {filter.map((lang, i) => (
-        <div className="tab--btn" key={i}>
-          {" "}
-          <span className="tab--btn__text">{lang}</span>
-          <span className="tab--btn__cross" onClick={(e) => handleRemove(e, i)}>
-            <ImCross />
-          </span>
-        </div>
-      ))}
+      <div className="filters">
+        {" "}
+        {filter.map((lang, i) => (
+          <div className="tab--btn" key={i}>
+            {" "}
+            <span className="tab--btn__text">{lang}</span>
+            <span
+              className="tab--btn__cross"
+              onClick={(e) => handleRemove(e, i)}
+            >
+              <ImCross />
+            </span>
+          </div>
+        ))}
+      </div>
+      <span className="clear" onClick={handleRemoveAll}>
+        clear
+      </span>
     </div>
   );
 };
