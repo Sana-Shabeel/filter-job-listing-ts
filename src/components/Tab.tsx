@@ -6,13 +6,17 @@ interface Props {
 }
 
 const Tab = ({ filter }: Props) => {
+  const handleRemove = (e: React.MouseEvent) => {
+    console.log(e.currentTarget.parentElement?.classList.toggle("remove"));
+  };
+
   return (
     <div className="tab">
-      {filter.map((lang) => (
-        <div className="tab--btn">
+      {filter.map((lang, i) => (
+        <div className="tab--btn" key={i}>
           {" "}
           <span className="tab--btn__text">{lang}</span>
-          <span className="tab--btn__cross">
+          <span className="tab--btn__cross" onClick={(e) => handleRemove(e)}>
             <ImCross />
           </span>
         </div>
