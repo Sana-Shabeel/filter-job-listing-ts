@@ -2,7 +2,7 @@
   width: min(100% - 4rem, 1110px);
   margin: 1.5rem auto;
   border-radius: 5px;
-  box-shadow: -1px 5px 5px 2px #d4dfdf;
+  box-shadow: -1px 5px 5px 2px hsl(180 29% 50% / 0.2);
 }
 .featured-job {
   border-left: 5px solid var(--dark-grayish-cyan);
