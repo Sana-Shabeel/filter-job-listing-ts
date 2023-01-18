@@ -23,9 +23,10 @@ dark = --very-dark-grayish-cyan
 
 .new,
 .featured {
+  height: 25px;
   display: grid;
   place-items: center;
-  padding: 0.5em;
+  padding: 0 0.5em;
   border-radius: 20%/50%;
   font-weight: 700;
   font-size: 0.8rem;
@@ -81,4 +82,8 @@ h4 {
 
 .tab--btn__cross:hover {
   background-color: var(--very-dark-grayish-cyan);
+}
+
+.remove {
+  display: none;
 }
