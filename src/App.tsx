@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import data from "./data.json";
 import { Role } from "./model";
 import "./App.css";
@@ -6,31 +6,42 @@ import JobList from "./components/JobList";
 import Tab from "./components/Tab";
 
 function App() {
-  // console.log(data);
-
-  const [jobData, setJobData] = useState<Role[]>(data);
   const [filter, setFilter] = useState<string[]>([]);
+  const [filteredData, setFilteredData] = useState<Role[]>(data);
 
-  const filterItems = (filterElement: string) => {
-    const res = data.filter((role) => {
-      return (
-        role.languages.includes(filterElement) ||
-        role.level === filterElement ||
-        role.role === filterElement
-      );
+  const findJob = (array: Role[], filterArr: string[]) => {
+    return array.filter((item) => {
+      return filterArr.every((filterElement) => {
+        return (
+          item.languages.includes(filterElement) ||
+          item.tools.includes(filterElement) ||
+          item.level === filterElement ||
+          item.role === filterElement
+        );
+      });
     });
-    setFilter((prev) => [...prev, filterElement]);
-    setJobData(res);
-
-    console.log(res);
   };
+
+  useEffect(() => {
+    console.log(filter);
+
+    const filteredResults = findJob(data, filter);
+    console.log(filteredResults);
+
+    setFilteredData(filteredResults);
+  }, [filter]);
 
   return (
     <div className="App">
       <header className="App-header"></header>
       <Tab filter={filter} />
-      {jobData.map((role) => (
-        <JobList role={role} key={role.id} filterItems={filterItems} />
+      {filteredData.map((role) => (
+        <JobList
+          job={role}
+          key={role.id}
+          filter={filter}
+          setFilter={setFilter}
+        />
       ))}
     </div>
   );
