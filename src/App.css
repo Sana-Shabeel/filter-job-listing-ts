@@ -39,3 +39,46 @@ h3,
 h4 {
   margin: 0;
 }
+
+.tab {
+  width: min(100% - 4rem, 1110px);
+  height: 72px;
+  display: flex;
+  align-items: center;
+  padding: 0.5em 1em;
+  margin: -2% auto 0;
+  background: var(--desaturated-dark-cyan);
+  border-radius: 8px;
+  box-shadow: 0px 3px 5px 2px #c6d6d6;
+}
+
+.tab--btn {
+  width: fit-content;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+  border-radius: 4px;
+  background-color: var(--lgc-filter-tablet);
+  margin: 0 0.5rem;
+}
+.tab--btn__text {
+  padding: 0.5em 0 0.5em 1em;
+  font-weight: 700;
+  color: var(--dark-grayish-cyan);
+}
+
+.tab--btn__cross {
+  background-color: #5aa5a5;
+  padding: 0.6em 0.6em;
+  font-weight: 700;
+  text-align: center;
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+  color: var(--desaturated-dark-cyan);
+  cursor: pointer;
+}
+
+.tab--btn__cross:hover {
+  background-color: var(--very-dark-grayish-cyan);
+}
