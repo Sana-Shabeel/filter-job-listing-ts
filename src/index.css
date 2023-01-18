@@ -1,11 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@100;200;300;400;500;600;700;800;900&display=swap");
 
 :root {
-  --desaturated-dark-cyan: #effafa;
-  --lgc-background: #effafa; /* Light Grayish Cyan */
-  --lgc-filter-tablet: #deeded;
-  --dark-grayish-cyan: #7b8e8e;
-  --very-dark-grayish-cyan: #2c3a3a;
+  --desaturated-dark-cyan: hsl(180, 52%, 96%);
+  --lgc-background: hsl(180, 52%, 96%); /* Light Grayish Cyan */
+  --lgc-filter-tablet: hsl(180, 29%, 90%);
+  --dark-grayish-cyan: hsl(180, 8%, 52%);
+  --very-dark-grayish-cyan: hsl(180, 14%, 20%);
 }
 
 body {
