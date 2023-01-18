@@ -72,7 +72,16 @@
   cursor: pointer;
   color: var(--dark-grayish-cyan);
 }
+.divider {
+  display: none;
+}
 @media only screen and (max-width: 550px) {
+  .divider {
+    display: block;
+    width: 100%;
+    height: 1px;
+    background: var(--dark-grayish-cyan);
+  }
   .job-list {
     width: 90%;
     margin: 3rem auto;
