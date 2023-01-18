@@ -8,13 +8,19 @@ import Tab from "./components/Tab";
 function App() {
   // console.log(data);
 
-  const [job, setJob] = useState<Role[]>(data);
+  const [jobData, setJobData] = useState<Role[]>(data);
   const [filter, setFilter] = useState<string[]>([]);
 
-  const handleClick = (lang: string) => {
-    const res = data.filter((d) => d.languages.includes(lang));
-    setFilter((prev) => [...prev, lang]);
-    setJob(res);
+  const filterItems = (filterElement: string) => {
+    const res = data.filter((role) => {
+      return (
+        role.languages.includes(filterElement) ||
+        role.level === filterElement ||
+        role.role === filterElement
+      );
+    });
+    setFilter((prev) => [...prev, filterElement]);
+    setJobData(res);
 
     console.log(res);
   };
@@ -23,8 +29,8 @@ function App() {
     <div className="App">
       <header className="App-header"></header>
       <Tab filter={filter} />
-      {job.map((role) => (
-        <JobList role={role} key={role.id} handleClick={handleClick} />
+      {jobData.map((role) => (
+        <JobList role={role} key={role.id} filterItems={filterItems} />
       ))}
     </div>
   );
