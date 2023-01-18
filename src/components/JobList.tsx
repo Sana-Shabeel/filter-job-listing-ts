@@ -3,11 +3,10 @@ import { Role } from "../model";
 import "./JobList.css";
 interface Props {
   role: Role;
+  handleClick: (lang: string) => void;
 }
 
-const JobList = ({ role }: Props) => {
-  console.log(role.logo);
-
+const JobList = ({ role, handleClick }: Props) => {
   return (
     <section className={`job-list ${role.featured ? "featured-job" : ""}`}>
       <div className="container">
@@ -38,7 +37,9 @@ const JobList = ({ role }: Props) => {
           <div className="tag">{role.role}</div>
           <div className="tag">{role.level}</div>
           {role.languages.map((lang) => (
-            <div className="tag">{lang}</div>
+            <div className="tag" id="lang" onClick={() => handleClick(lang)}>
+              {lang}
+            </div>
           ))}
         </div>
       </div>
