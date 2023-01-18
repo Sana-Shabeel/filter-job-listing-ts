@@ -23,8 +23,6 @@ function App() {
   };
 
   useEffect(() => {
-    console.log(filter);
-
     const filteredResults = findJob(data, filter);
     console.log(filteredResults);
 
@@ -34,7 +32,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header"></header>
-      <Tab filter={filter} />
+      {filter.length > 0 && <Tab filter={filter} setFilter={setFilter} />}
       {filteredData.map((role) => (
         <JobList
           job={role}
