@@ -45,6 +45,8 @@ h4 {
   width: min(100% - 4rem, 1110px);
   height: 72px;
   display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
   align-items: center;
   padding: 0.5em 1em;
   margin: -2% auto 0;
@@ -52,7 +54,15 @@ h4 {
   border-radius: 8px;
   box-shadow: -1px 5px 5px 2px hsl(180 29% 50% / 0.2);
 }
-
+.filters {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.clear:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
 .tab--btn {
   width: fit-content;
   display: flex;
@@ -91,6 +101,8 @@ h4 {
 @media only screen and (max-width: 550px) {
   .tab {
     width: 90%;
+    height: auto;
     margin: 3rem auto;
+    flex-direction: column;
   }
 }
