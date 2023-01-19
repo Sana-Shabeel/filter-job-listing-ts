@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/filter-job-listing-ts/static/css/main.1685e31f.css",
+    "main.js": "/filter-job-listing-ts/static/js/main.b379f312.js",
+    "static/js/787.a6096a23.chunk.js": "/filter-job-listing-ts/static/js/787.a6096a23.chunk.js",
+    "static/media/bg-header-desktop.svg": "/filter-job-listing-ts/static/media/bg-header-desktop.752d0faf14c00c6fb55f.svg",
+    "index.html": "/filter-job-listing-ts/index.html",
+    "main.1685e31f.css.map": "/filter-job-listing-ts/static/css/main.1685e31f.css.map",
+    "main.b379f312.js.map": "/filter-job-listing-ts/static/js/main.b379f312.js.map",
+    "787.a6096a23.chunk.js.map": "/filter-job-listing-ts/static/js/787.a6096a23.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.1685e31f.css",
+    "static/js/main.b379f312.js"
+  ]
+}
